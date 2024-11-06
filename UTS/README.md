@@ -98,11 +98,11 @@ gateway 70.70.70.2
 Router 3 (KHI)
 
 1. routes 1: <br>
-dst address 192.168.10.0/24 <br>
+destination address 192.168.10.0/24 <br>
 gateway 60.60.60.1
 
 2. routes 2: <br>
-dst address 192.168.20.0/24 <br>
+destination address 192.168.20.0/24 <br>
 gateway 70.70.70.1
 
 # Analisis
