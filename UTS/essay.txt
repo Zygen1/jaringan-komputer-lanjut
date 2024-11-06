@@ -1,0 +1,1 @@
+Routing statis adalah jenis teknik routing jaringan yang bersifat statis dan dikonfigurasi manual oleh administrator jaringan12345. Dalam static routing, rute ditambahkan secara manual ke tabel routing pada router, dan kelebihannya termasuk keamanan yang lebih tinggi dan penggunaan bandwidth yang lebih efisien
