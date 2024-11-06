@@ -56,15 +56,15 @@ Tambahkan network: <br>
 # Set Neighbour Routing RIP
 Router 1 (CR) <br>
 Tambahkan neighbour: <br>
-10.10.10.0 <br>
-20.20.20.0 
+10.10.10.2 <br>
+20.20.20.2
 
 Router 2 (KJ) <br>
 Tambahkan neighbour: <br>
-20.20.20.0 <br>
-30.30.30.0
+20.20.20.1 <br>
+30.30.30.1
 
 Router 3 (KHI) <br>
 Tambahkan neighbour: <br>
-10.10.10.0 <br> 
-30.30.30.0
+10.10.10.1 <br> 
+30.30.30.2
