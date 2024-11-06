@@ -1,18 +1,18 @@
 # Set ip setiap router
 Router 1 (CR) <br>
 Ethernet 2: 192.168.30.1/24 <br>
-Ethernet 3: 10.10.10.1 <br>
-Ethernet 4: 20.20.20.1
+Ethernet 3: 10.10.10.1/24 <br>
+Ethernet 4: 20.20.20.1/24
  
 Router 2 (KJ) <br>
 Ethernet 2: 192.168.10.1/24 <br>
-Ethernet 3: 20.20.20.2 <br>
-Ethernet 4: 30.30.30.2
+Ethernet 3: 20.20.20.2/24 <br>
+Ethernet 4: 30.30.30.2/24
 
 Router 3 (KHI) <br>
 Ethernet 2: 192.168.20.1/24 <br>
-Ethernet 3: 10.10.10.2 <br>
-Ethernet 4: 30.30.30.1
+Ethernet 3: 10.10.10.2/24 <br>
+Ethernet 4: 30.30.30.1/24
 
 # Lakukan DHCP Server setiap router
 Router 1 (CR) <br>
