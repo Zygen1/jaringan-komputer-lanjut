@@ -1,4 +1,4 @@
-# Lamda Pratama Aprilliansyah
+# Lamda Pratama Aprilliansyah (20210801056)
 
 # Essay
 1. Routing Static merupakan jenis teknik routing jaringan yang bersifat statis dan dikonfigurasi manual oleh administrator jaringan. Dalam static routing, rute ditambahkan secara manual ke tabel routing pada router, dan kelebihannya termasuk keamanan yang lebih tinggi dan penggunaan bandwidth yang lebih efisien. Namun kekurangannya yaitu lebih rumit karena perlu konfigurasi secara manual.
