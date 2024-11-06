@@ -19,7 +19,7 @@ Routher 1 (CR)
 1. Hubungkan router ke internet dengan dhcp Client
 
 2. Tambahkan Ip address:
-   Ether 2: 192.168.10.1/24 -> ip1
+   Ether 2: 192.168.10.1/24 -> ip1 <br>
    IPIP Tunnel: 60.60.60.1/25 -> ip2
 
 3. Lakukan DHCP Server untuk Ether 2
@@ -28,8 +28,8 @@ Router 2 (KJ)
 1. Hubungkan router ke internet dengan dhcp Client
 
 2. Tambahkan Ip address:
-   Ether 2: 192.168.20.1/24 -> ip1
-   IPIP Tunnel: 60.60.60.2/25 -> ip2
+   Ether 2: 192.168.20.1/24 -> ip1 <br>
+   IPIP Tunnel: 60.60.60.2/25 -> ip2 <br>
    IPIP Tunnel: 70.70.70.1/25 -> ip3
 
 3. Lakukan DHCP Server untuk Ether 2
@@ -38,10 +38,9 @@ Router 3 (KHI)
 
 1. Hrouter ke internet dengan dhcp Client
 
-2. Tambahkan Ip address
-   ip->addresses -> +
-   ip 1, 192.168.3.1/24 -> Ether 2
-   ip 2, 11.11.11.2 -> IPIP Tunnel
+2. Tambahkan Ip address:
+   Ether 2: 192.168.30.1/24 -> ip1 <br>
+   IPIP Tunnel: 70.70.70.2 -> ip2
 
 3. Buat Dhcp Server untuk Ether 2
 
@@ -49,29 +48,29 @@ Router 3 (KHI)
 
 Routher 1 (CR)
 1. Tambahkan interface ip tunnel 1
-Local address : 145.168.10.1
+Local address : 145.168.10.1 <br>
 Remote Address R2 : 145.168.10.2
 
 2. Tambahkan interface ip tunnel 2
-Local address : 145.168.10.1
+Local address : 145.168.10.1 <br>
 Remote Address R2 : 145.168.20.2
 
 Router 2 (KJ)
 1. Tambahkan interface ip tunnel 1
-Local address : 145.168.10.2
+Local address : 145.168.10.2 <br>
 Remote Address R1 : 145.168.10.1
 
 2. Tambahkan interface ip tunnel 2
-Local address : 145.168.20.1
+Local address : 145.168.20.1 <br>
 Remote Address R3: 145.168.20.2
 
 Router 3 (KHI) 
 1. Tambahkan interface ip tunnel 1
-Local address : 145.168.20.2
+Local address : 145.168.20.2 <br>
 Remote Address R1 : 145.168.10.1
 
 2. Tambahkan interface ip tunnel 2
-Local address : 145.168.20.2
+Local address : 145.168.20.2 <br>
 Remote Address R2: 145.168.20.1
 
 # Konfigurasi routing
@@ -79,31 +78,31 @@ Remote Address R2: 145.168.20.1
 Router 2 (KJ)
 
 1. routes 1:
-destination address 192.168.20.0/24
+destination address 192.168.20.0/24 <br>
 gateway 60.60.60.2
 
 2. routes 2:
-destination address 192.168.30.0/24
+destination address 192.168.30.0/24 <br>
 gateway 70.70.70.2
 
 Router 2 (KJ)
 
 1. routes 1:
-destination address 192.168.10.0/24
+destination address 192.168.10.0/24 <br>
 gateway 60.60.60.1
 
 2. routes 2:
-destination address 192.168.3.0/24
+destination address 192.168.3.0/24 <br>
 gateway 70.70.70.2
 
 Router 3 (KHI)
 
 1. routes 1:
-dst address 192.168.10.0/24
+dst address 192.168.10.0/24 <br>
 gateway 60.60.60.1
 
 2. routes 2:
-dst address 192.168.20.0/24
+dst address 192.168.20.0/24 <br>
 gateway 70.70.70.1
 
 # Analisis
@@ -111,20 +110,20 @@ gateway 70.70.70.1
 Ketiga router (R1 CR, R2 KJ, dan R3 KHI) terhubung melalui IP-in-IP (IPIP) tunneling, yang menciptakan koneksi pribadi virtual antar situs melalui Internet publik.
 
 2.  Pengalamatan IP Publik dan Privat
-IP Publik diberikan pada setiap interface router yang terhubung ke Internet:
-R1 CR: 145.168.10.1/25
-R2 KJ: 145.168.10.2/25
-R3 KHI: 145.168.20.2/25
-Subnet IP Privat diberikan untuk jaringan internal di setiap lokasi:
-R1 CR: 192.168.10.0/24
-R2 KJ: 192.168.20.0/24
-R3 KHI: 192.168.30.0/24
+IP Publik diberikan pada setiap interface router yang terhubung ke Internet: <br>
+R1 CR: 145.168.10.1/25 <br>
+R2 KJ: 145.168.10.2/25 <br>
+R3 KHI: 145.168.20.2/25 <br>
+Subnet IP Privat diberikan untuk jaringan internal di setiap lokasi: <br>
+R1 CR: 192.168.10.0/24 <br>
+R2 KJ: 192.168.20.0/24 <br>
+R3 KHI: 192.168.30.0/24 <br>     
 Subnet privat ini terhubung ke beberapa komputer atau perangkat melalui switch di masing-masing lokasi.
 
 3. Konfigurasi IPIP Tunneling
-Tunneling IPIP dibuat antara:
-R1 CR dan R2 KJ dengan endpoint tunnel 60.60.60.1/25 dan 60.60.60.2/25
-R2 KJ dan R3 KHI dengan endpoint tunnel 70.70.70.1/25 dan 70.70.70.2/25
+Tunneling IPIP dibuat antara: <br>
+R1 CR dan R2 KJ dengan endpoint tunnel 60.60.60.1/25 dan 60.60.60.2/25 <br>
+R2 KJ dan R3 KHI dengan endpoint tunnel 70.70.70.1/25 dan 70.70.70.2/25 <br>
 Tunneling ini memungkinkan komunikasi aman antar jaringan internal di ketiga lokasi melalui Internet publik, yang berfungsi sebagai Virtual Private Network (VPN).
 
 4. Kesimpulan
