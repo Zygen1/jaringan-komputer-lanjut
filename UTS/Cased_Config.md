@@ -26,16 +26,13 @@ DHCP Server -> Ethernet 2
 
 # Set Interface Routing RIP
 Router 1 (CR) <br>
-Tambahkan Interface 3 | Receive v1-2 | Send v2 <br>
-Tambahkan Interface 4 | Receive v1-2 | Send V2
+Tambahkan Interface all | Receive v1-2 | Send v2 <br>
 
 Router 2 (KJ) <br>
-Tambahkan Interface 3 | Receive v1-2 | Send v2 <br>
-Tambahkan Interface 4 | Receive v1-2 | Send V2
+Tambahkan Interface all | Receive v1-2 | Send v2 <br>
 
 Router 3 (KHI) <br>
-Tambahkan Interface 3 | Receive v1-2 | Send v2 <br>
-Tambahkan Interface 4 | Receive v1-2 | Send V2
+Tambahkan Interface all | Receive v1-2 | Send v2 <br>
 
 # Set Network Routing RIP
 Router 1 (CR) <br>
@@ -54,4 +51,20 @@ Router 3 (KHI) <br>
 Tambahkan network: <br>
 192.168.20.0 <br>
 10.10.10.0 <br>
+30.30.30.0
+
+# Set Neighbour Routing RIP
+Router 1 (CR) <br>
+Tambahkan neighbour: <br>
+10.10.10.0 <br>
+20.20.20.0 
+
+Router 2 (KJ) <br>
+Tambahkan neighbour: <br>
+20.20.20.0 <br>
+30.30.30.0
+
+Router 3 (KHI) <br>
+Tambahkan neighbour: <br>
+10.10.10.0 <br> 
 30.30.30.0
